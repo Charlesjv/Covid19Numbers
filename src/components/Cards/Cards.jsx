@@ -29,7 +29,12 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               ACTIVE CASES
             </Typography>
             <Typography variant="h5">
-              <CountUp start={0} end={confirmed} duration={2.5} separator="," />
+              <CountUp
+                start={0}
+                end={confirmed.value}
+                duration={2.5}
+                separator=","
+              />
             </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
@@ -51,7 +56,12 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               RECOVERED
             </Typography>
             <Typography variant="h5">
-              <CountUp start={0} end={recovered} duration={2.5} separator="," />
+              <CountUp
+                start={0}
+                end={recovered.value}
+                duration={2.5}
+                separator=","
+              />
             </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
@@ -73,7 +83,12 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               DEATHS
             </Typography>
             <Typography variant="h5">
-              <CountUp start={0} end={deaths} duration={2.5} separator="," />
+              <CountUp
+                start={0}
+                end={deaths.value}
+                duration={2.5}
+                separator=","
+              />
             </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
